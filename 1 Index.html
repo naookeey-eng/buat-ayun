@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<title>bwat ayun yang paling camtiq</title>
+
+<style>
+body{
+    background:#ffe6f2;
+    font-family:'Comic Sans MS', cursive;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    flex-direction:column;
+}
+
+.glass-container{
+    background:rgba(255,182,193,.25);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+}
+
+h1,p{
+    font-weight:bold;
+}
+
+button{
+    background:rgba(255,105,180,.6);
+    color:white;
+    font-size:1.5rem;
+    margin:10px;
+    border-radius:10px;
+    cursor:pointer;
+    padding:15px 25px;
+    border:none;
+    transition:.3s;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+button:active{
+    animation:shake .3s;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0)}
+    25%{transform:translateX(-5px)}
+    50%{transform:translateX(5px)}
+    75%{transform:translateX(-5px)}
+}
+
+#petunjuk{
+    margin-top:20px;
+    background:#fff0f5;
+    color:#ff1493;
+    border:2px dashed #ff69b4;
+}
+
+#hint-box{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#fff0f8;
+    padding:20px;
+    border-radius:12px;
+    display:none;
+    z-index:1000;
+    font-weight:bold;
+}
+
+#close-hint{
+    cursor:pointer;
+}
+
+/* AYUN IMAGE */
+#popupAyun{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    opacity:0;
+    transition: 500 ms;
+    width:400px;
+    z-index:2000;
+}
+
+#popupAyun.show{
+    transform:translate(-50%,-50%) scale(1);
+    opacity:1;
+}
+
+/* SweetAlert text center + bold */
+.swal2-html-container{
+    text-align:center !important;
+    font-weight:bold;
+}
+</style>
+</head>
+ <audio id="bgm" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<button id="muteBtn"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+font-size:14px;
+padding:8px 12px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+background:#ff69b4;
+color:white;
+font-weight:bold;
+z-index:3000;
+">
+🔊
+</button>
+
+<body>
+
+<div class="glass-container">
+    <h1>HEPI BIDIYYYYYYYYY</h1>
+    <p>ur cois was metder</p>
+    <button id="birthday">(╯✧▽✧)╯</button>
+    <button id="photo">(≧◡≦)</button>
+    <button id="wish">(o_O)！</button>
+</div>
+
+<button id="petunjuk">!! petunjuk</button>
+
+<div id="hint-box">
+<span id="close-hint">𐦍</span>
+<p>
+tolong cari tombol suara trs klik<br>
+and janlup atur volume biar kedengeran lagunya <br>
+mmf kalo ribet<br>
+hope u like it
+</p>
+</div>
+
+<img id="popupAyun" src="ayun.jpeg">
+
+<script>
+const petunjuk=document.getElementById("petunjuk");
+const hintBox=document.getElementById("hint-box");
+const closeHint=document.getElementById("close-hint");
+
+petunjuk.onclick=()=>hintBox.style.display="block";
+closeHint.onclick=()=>hintBox.style.display="none";
+
+function showAyun(){
+    const img=document.getElementById("popupAyun");
+    img.classList.add("show");
+    setTimeout(()=>img.classList.remove("show"),3000);
+}
+
+/* BIRTHDAY */
+document.getElementById("birthday").onclick=()=>{
+Swal.fire({
+title:"<b>࿔‧ ֶָ֢˚˖𐦍˖˚ֶָ֢ ‧࿔</b>",
+html:`<b>
+IHHH SELAMAT HEPIBIRTHDAY (LAGI)<br><br>
+ for some reason u just breath and exist sampe di ulang tahunmu yang sekarang adalah suatu hal yang sangat menginspirasi 
+    meskipun kita jarang ketemu dan komunikasi, i bet u done so many good things to urself and people arround. 
+    aku sebagai temen yang beberapa kali kamu pilih sbg tempat cerita bener bener bersyukur yunnnnnnnnnn <br> <br>
+    mungkin aku gabisa ngasi saran ataupun nyelesaiin permasalahanmu yang kayaknya selalu beraaaaaaaaaaat bgt untuk manusia pertama kali hidup seusiamu (seusia kita sih) 
+    terus lagi, mulai dari perjalanan otw kelas 10 bahkan sampai massuk ptn yang prosesnya terjal bgt 
+    di saat saat kamu down, kamu terus bangkit dan bahkan masih menyempatkan waktu buat nanya ke aku, apa kabar and smth like that..
+    aku selalu berterima kasih yun, kamu menyisakan ruang, menyempatkan waktu, dan energi buat mempertanyakan aku
+    di saat yang pas banget aky jugak struggle dengan hidupku sendiri, kamu selalu ngasih validasi nyata tiap kali aku ngeluh esspecially waktu jaman jaman utbk ahahhahaha <br> <br>
+    yang paling ngebekas itu pas kamu bilang kurleb gini "kok sombong banget sampe gamau nangis ke Tuhannya"
+    ITU ASLI BIKIN BANGKIT LAGI, NGINGETIN KALO AK GA SENDIRIAN, AK PUNYA TEMPAT BERSANDAR YANG UDAH SANGAT AMAT BENAR UNTUK DISANDARI
+    sebenere masi banyak lainnya yang gabisa aku sebutin satu satu
+    but aku selalu bangga tau yun sama kamu, hehe. hidup yang lama ya yun
+    semoga kamu dikelilingin orang orang sebaik kamu juga 
+</b>`,
+confirmButtonText:"YEAYYY",
+allowOutsideClick:false
+}).then(()=>showAyun());
+};
+
+/* PHOTO */
+document.getElementById("photo").onclick=()=>{
+Swal.fire({
+title:"<b>fotonya sisa ini doang pliss</b>",
+html:`<b>
+<img src="ayun 1.jpeg" width="200"><br><br>
+</b>`,
+confirmButtonText:"YEAYYY",
+allowOutsideClick:false
+}).then(()=>showAyun());
+};
+
+/* WISH */
+document.getElementById("wish").onclick=()=>{
+Swal.fire({
+title:"<b> ❀。• *₊°。 ❀°。</b>",
+html:`<b>
+reason why u should alive longer <br><br>
+<a href="https://pin.it/6oAD3kt34" target="_blank">
+CLICK ME FOR A SPECIAL WISH
+</a>
+</b>`,
+confirmButtonText:"YEAYYY",
+allowOutsideClick:false
+}).then(()=>showAyun());
+};
+</script>
+
+<script>
+const bgm = document.getElementById("bgm");
+const muteBtn = document.getElementById("muteBtn");
+
+bgm.volume = 0;
+
+function fadeInMusic(){
+    bgm.play();
+    let vol = 0;
+    const fade = setInterval(()=>{
+        if(vol < 0.6){
+            vol += 0.02;
+            bgm.volume = vol;
+        }else{
+            clearInterval(fade);
+        }
+    },100);
+}
+
+// play pas klik pertama
+document.addEventListener("click", function firstClick(){
+    fadeInMusic();
+    document.removeEventListener("click", firstClick);
+});
+
+// mute / unmute
+muteBtn.onclick = () => {
+    bgm.muted = !bgm.muted;
+    muteBtn.textContent = bgm.muted ? "🔇" : "🔊";
+};
+</script>
+
+</body>
+</html>
